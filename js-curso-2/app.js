@@ -1,12 +1,7 @@
 
-// let tituloPrincipal = document.querySelector('h1');
-// tituloPrincipal.innerHTML= "Hora del Desafío";
-
-// let parrafo = document.querySelector("p");
-// parrafo.innerHTML = "Desafío: hora de practicar 1";
-// la function permite disminuir el codigo repetitivo
-
-// Cambia el contenido de la etiqueta h1 con document.querySelector y asigna el siguiente texto: "Hora del Desafío".
+// Cambia el contenido de la etiqueta h1 con document.querySelector y asigna el siguiente texto: "Hora del Desafío"
+""
+const ciudadesDeBrasil=["Santos","Ouro","Preto","Manaos","Curitiba","Recife","Brasília","Foz do Iguaçu","Salvador","San Pablo","Rio de Janeiro"];
 
 function asignartextoElemento(elemento,texto){
     let elementoHtml = document.querySelector(elemento);
@@ -26,15 +21,21 @@ function BotonConsole() {
 }
 // Crea una función que se ejecute cuando se haga clic en el botón "prompt", preguntando el nombre de una ciudad de Brasil.
 // Luego, muestra una alerta con el mensaje concatenando la respuesta con el texto: "Estuve en {ciudad} y me acordé de ti".
+// let listaCiudadesBrasil = [Santos,Ouro,Preto,Manaos,Curitiba,Recife,Brasília,Foz do Iguaçu,Salvador,San Pablo,Rio de Janeiro];
 
 function BotonPrompt(){
-    const ciudad = prompt("Ingresa el nombre de una ciudad de Brasil:");
+    const ciudad = prompt("Ingresa el nombre de una de las 10 ciudades Favoritas de Brasil:");
     if (ciudad) {
-        alert(`Estuve en ${ciudad} y me acordé de ti.`);
-    } else {
-         alert("No ingresaste ninguna ciudad. ¡Inténtalo de nuevo!");
+        if (ciudadesDeBrasil.includes(ciudad)) {
+          alert(`Estuve en ${ciudad} y me acordé de ti.`);
+        } else {
+          alert(`No es una de las 10 ciudades favoritas de Brasil: ${ciudad}, pero gracias por compartirlo.`);
+        }
+      } else {
+        alert("No ingresaste ninguna ciudad. ¡Inténtalo de nuevo!");
+      }
     }
-}
+
 // Crea una función que muestre una alerta con el mensaje: "Yo amo JS" siempre que se presione el botón "Alerta".
 
 function BotonAlert(){
